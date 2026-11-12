@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nba-scoreboard-widget"
+version = "0.1.0"
+description = "Floating desktop widget with the live NBA scoreboard of the night"
+readme = "README.md"
+authors = [
+    { name = "Fabio" }
+]
+license = { text = "MIT" }
+requires-python = ">=3.11"
+dependencies = [
+    "PyQt6>=6.6",
+    "PyQt6-Qt6>=6.6",
+]
+
+[project.scripts]
+nba-scoreboard-widget = "nba_scoreboard_widget.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"nba_scoreboard_widget" = ["assets/logos/*.svg"]
